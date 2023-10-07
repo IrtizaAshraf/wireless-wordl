@@ -101,11 +101,17 @@ for(let i = 0; i<phones.length;i++){
     </div>`
 }
     
-// // const cartArry = [];
-// const cartData = localStorage.getItem('cartItem');
-// const JsonData = JSON.parse(cartData);
-// console.log(JsonData);
-// // const cartArry = [...JsonData];
+// const cartArry = [];
+const cartData = localStorage.getItem('cartItem');
+const jsonData = JSON.parse(cartData);
+
+let cartArry;
+if(Array.isArray(jsonData)){
+    cartArry = [...jsonData]
+
+}else{
+    cartArry = []
+}
 
 
 
