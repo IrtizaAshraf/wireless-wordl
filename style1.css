@@ -344,3 +344,19 @@ h4 {
       margin-top: 50px;
       padding: 30px;
 }
+
+
+#registrationForm ,body{
+      background-color: rgb(37, 137, 137);
+}
+
+#registrationForm {
+      padding: 60px;
+}
+
+#main_head {
+      padding: 90px;
+      font-family: 'Young+Serif&display=swap';
+      font-size: 3rem;
+      font-weight: 800;
+}

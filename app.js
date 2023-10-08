@@ -164,3 +164,11 @@ function addColor(r) {
      
     }
 }
+
+
+
+
+
+// JavaScript (script.js):
+
+
