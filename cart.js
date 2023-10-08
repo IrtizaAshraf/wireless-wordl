@@ -1,3 +1,15 @@
+// go to home function
+
+function goToHome() {
+      const cart = JSON.stringify(cartArry);
+      localStorage.setItem('cartItem' , cart);
+      window.location = 'index.html'
+}
+
+
+
+
+
 const div = document.querySelector('#add-Cart');
 const data = localStorage.getItem('cartItem');
 const cartArry = JSON.parse(data);
@@ -11,7 +23,7 @@ function renderCart() {
       div.innerHTML = '';
       const totalpric = document.querySelector('#totalprice');
       let totalAmount = 0;
-      totalpric.innerHTML = ''
+      // totalpric.innerHTML = ''
       if (cartArry.length > 0) {
             for (let i = 0; i < cartArry.length; i++) {
                   totalAmount += cartArry[i].price * cartArry[i].quantity

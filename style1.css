@@ -208,6 +208,13 @@ transition: 1s ease;
       margin-top: 20px;
 }
 
+.main-mob img:hover{
+      -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      transform: scale(0.8);
+      transition: 1s ease;
+}
+
 h3 {
       font-size: 40px;
       font-family: 'Young+Serif&display=swap';
@@ -307,3 +314,33 @@ h4 {
       background-color: rgb(23, 129, 132)
 }
 
+
+#totalprice{
+      font-family: 'Young+Serif&display=swap';
+      font-size: 2rem;
+      font-weight: 600;
+}
+
+.shop-brand, p{
+      font-family: 'Poppins&family=Young+Serif&display=swap';
+      font-weight: 600;
+}
+#images img{
+      width: 80px;
+}
+
+#images img:hover{
+      -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2);
+      transition: 1s ease;
+}
+
+
+
+
+.footer-main{
+      background-color: #167e98;
+      margin-top: 50px;
+      padding: 30px;
+}
