@@ -346,8 +346,11 @@ h4 {
 }
 
 
-#registrationForm ,body{
-      background-color: rgb(37, 137, 137);
+.formed{
+      /* justify-content: center;
+      width: 50%;
+      height: 100%; */
+      background-color: rgba(119, 188, 188, 0.713);
 }
 
 #registrationForm {
@@ -359,4 +362,19 @@ h4 {
       font-family: 'Young+Serif&display=swap';
       font-size: 3rem;
       font-weight: 800;
+}
+
+.login{
+      background-color: #0b8aa9;
+      margin: 10%;
+      padding: 100px;
+      
+}
+#loginForm{
+      margin: auto;
+}
+
+#login{
+      background-color: #042171;
+      padding: 10px 20px 10px 20px ;
 }
