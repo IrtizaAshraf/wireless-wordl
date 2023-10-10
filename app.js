@@ -1,4 +1,6 @@
 
+// crtae a index  object the cart render section start----------------
+
 const getMob = document.getElementById("item")
 
 const phones = [
@@ -83,10 +85,13 @@ const phones = [
         camera: '8megapixel',
         price: 229999,
     }
-
+    
 ]
 
 //  console.log(phones[1].brand);
+// crtae a index  object the cart render section end---------------->
+
+// crtae a for loo  arry of objects  the cart render section start---------------->
 
 for (let i = 0; i < phones.length; i++) {
     getMob.innerHTML += `<div class="main-mob"><h3>${phones[i].brand}</h3>
@@ -100,11 +105,17 @@ for (let i = 0; i < phones.length; i++) {
     <button class="order">Order Now<i class="fa-brands fa-opencart fa-beat-fade"></i></button>
     </div>`
 }
+// crtae a for loo  arry of objects  the cart render section end---------------->
+
+
+
+// generqate the localstorage variabels and item ---------------->
 
 // const cartArry = [];
 const cartData = localStorage.getItem('cartItem');
 const jsonData = JSON.parse(cartData);
 
+// sperate  the localstorage data ---------------->
 let cartArry;
 if (Array.isArray(jsonData)) {
     cartArry = [...jsonData]
@@ -114,25 +125,25 @@ if (Array.isArray(jsonData)) {
 }
 
 
-
-
-function addToCart(index) {
-    // console.log('includes in array ==>', cartArry.includes(phones[index]));
-    if (cartArry.includes(phones[index])) {
-        console.log('Olready add in');
-        for (let i = 0; i < cartArry.length; i++) {
-            if (cartArry[i] === phones[index]) {
-                cartArry[i].quantity += 1
+ /// crrate a function of add to cart  section start ------------->
+ 
+ function addToCart(index) {
+     // console.log('includes in array ==>', cartArry.includes(phones[index]));
+     if (cartArry.includes(phones[index])) {
+         console.log('Olready add in');
+         for (let i = 0; i < cartArry.length; i++) {
+             if (cartArry[i] === phones[index]) {
+                 cartArry[i].quantity += 1
+                }
             }
-        }
-
-    } else {
-        console.log('Not Include ');
-        phones[index].quantity = 1
-        cartArry.push(phones[index]);
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
+            
+        } else {
+            console.log('Not Include ');
+            phones[index].quantity = 1
+            cartArry.push(phones[index]);
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
             title: 'Item added to cart successfully',
             showConfirmButton: false,
             timer: 1500
@@ -141,6 +152,10 @@ function addToCart(index) {
     // console.log(cartArry);
 }
 
+/// crrate a function of add to cart  section end ------------->
+
+
+/// crrate a function of goto cart, html start ------------->
 
 
 function goToCart() {
@@ -150,25 +165,29 @@ function goToCart() {
     window.location = 'cart.html';
 }
 
+/// crrate a function of goto cart, html end ------------->
+
+
+
+/// crrate a function of  heart color and like  section start  ------------->
 
 const back = document.querySelector('#heart')
-const backs = document.querySelector('#hearts')
+// const backs = document.querySelector('#hearts')
 
 function addColor(r) {
     switch (back) {
         case back.style.color = "red":
             break;
-        case backs.style.color = "red":
+            case back.style.color = "black":
             break;
-       
-     
-    }
+            
+            default:
+            // Default color if 'r' is not 'red' or 'black'
+            back.style.color = 'black';
+        }
 }
-
-
-
-
-
-// JavaScript (script.js):
-
-
+        
+/// crrate a function of  heart color and like  section end   ------------->
+    
+    
+    

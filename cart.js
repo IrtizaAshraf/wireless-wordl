@@ -8,7 +8,7 @@ function goToHome() {
 
 
 
-
+/// cart item varibales 
 
 const div = document.querySelector('#add-Cart');
 const data = localStorage.getItem('cartItem');
@@ -17,7 +17,7 @@ console.log(cartArry);
 
 
 
-
+// cart  rander function start--------
 
 function renderCart() {
       div.innerHTML = '';
@@ -54,9 +54,14 @@ function renderCart() {
       
       
 }
+// cart  rander function end--------
 
 
+// call the  cart  rander function --------
 renderCart()
+
+
+// create a  increasquntity  function ------ 
 
 function increaseQuantity(index) {
       div.innerHTML = ''
@@ -65,6 +70,7 @@ function increaseQuantity(index) {
       renderCart()
 }
 
+// create a  decreasequntity  function ----------- 
 
 function decreaseQuantity(index) {
       div.innerHTML = ''
@@ -78,6 +84,7 @@ function decreaseQuantity(index) {
       }
 }
 
+// create a  delete cart  function ----------- 
 
 function deleteItem(index) {
       div.innerHTML = '';
@@ -86,6 +93,8 @@ function deleteItem(index) {
 }
 
 
+// create a  windows reload  function ----------- 
 window.onbeforeunload = function () {
       localStorage.setItem('cartItem', JSON.stringify(cartArry));
 };
+
