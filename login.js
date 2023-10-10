@@ -48,7 +48,7 @@ loginForm.addEventListener('submit', function(event) {
     // Retrieve user data from local storage
     const storedUser = JSON.parse(localStorage.getItem('user')) || [];
 
-    const matchedUserdata = storedUser.find(user => user.name === enteredUsername && user.password === enteredPassword); 
+    const matchedUserdata = storedUser.find(user => user.username === enteredUsername && user.password === enteredPassword); 
 
     if (matchedUserdata) {
         Swal.fire({
@@ -69,3 +69,62 @@ loginForm.addEventListener('submit', function(event) {
         });
     }
 });
+
+
+
+// document.querySelector('#loginForm').addEventListener('submit', function (event) {
+//     event.preventDefault();
+
+//     const enteredUsername  = document.getElementById('username').value;
+//     const enterdedPasswor   = document.getElementById('password').value;
+
+//     const userData = JSON.parse(localStorage.getItem('user')) || [];
+    
+//     // Initialize a variable to check if a matching user is found
+//     let isMatchingUser = false;
+
+//     // Loop through user data to check for a match
+//     for (const user of userData) {
+//         if (user.name === enteredUsername && user.password === enterdedPasswor) {
+//             isMatchingUser = true;
+//             break; // Exit the loop once a match is found
+//         }
+//     }
+
+//     if (isMatchingUser) {
+//         // Login is successful
+//         window.location.href = 'index.html';
+//     } else {
+//         alert('Invalid login credentials. Please try again.');
+//     }
+// });
+
+
+
+
+// document.querySelector('#loginForm').addEventListener('submit', function(event) {
+//     event.preventDefault();
+
+//     const enteredUsername = document.getElementById('username').value;
+//     const enteredPassword = document.getElementById('password').value;
+
+//     const userData = JSON.parse(localStorage.getItem('user')) || [];
+
+//     // Initialize a variable to check if a matching user is found
+//     let isMatchingUser = false;
+
+//     // Loop through user data to check for a match
+//     for (const user of userData) {
+//         if (user.username === enteredUsername && user.password === enteredPassword) {
+//             isMatchingUser = true;
+//             break; // Exit the loop once a match is found
+//         }
+//     }
+
+//     if (isMatchingUser) {
+//         // Login is successful
+//         window.location.href = 'index.html';
+//     } else {
+//         alert('Invalid login credentials. Please try again.');
+//     }
+// });
