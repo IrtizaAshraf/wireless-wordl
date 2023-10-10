@@ -2,8 +2,33 @@
 
 function goToHome() {
       const cart = JSON.stringify(cartArry);
-      localStorage.setItem('cartItem' , cart);
+      localStorage.setItem('cartItem', cart);
       window.location = 'index.html'
+}
+
+
+let printname = document.getElementById('userprint');
+
+// Retrieve user data from local storage
+const storedUsers = JSON.parse(localStorage.getItem('user')) || [];
+
+console.log(storedUsers);
+
+
+// Check if there are stored users
+// storedUsers.forEach( user =>  username {
+      
+// });
+if (storedUsers.length > 0) {
+      // Get the first user from the stored users
+      const user = storedUsers[0];
+
+      // Set the innerHTML of the element
+      printname.innerHTML = `<i class="fa-solid fa-user fa-beat-fade"></i> Hi ${user.username}`;
+      console.log(printname);
+} else {
+      // Handle the case when there are no stored users
+      printname.innerHTML = 'No user found';
 }
 
 
@@ -41,18 +66,18 @@ function renderCart() {
                   <button  class="delete" onclick="deleteItem(${i})">Delete<i class="fa-solid fa-trash-can fa-fade"></i></button>
                   <button class="order">Order Now<i class="fa-brands fa-opencart fa-beat-fade"></i></button>
                   </div>`
-                  
+
             }
-            
+
             totalpric.innerHTML = `Total Amount: RS ${totalAmount}`
       }
-      
-      
+
+
       else {
             div.innerHTML = '<h1 class="heading">NO Product Major..</h1>'
       }
-      
-      
+
+
 }
 // cart  rander function end--------
 

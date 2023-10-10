@@ -13,14 +13,18 @@ loginForm.addEventListener('submit', function(event) {
     
     // Loop through user data to check for a match
     for (const user of userData) {
+    
         if (user.username === enteredUsername && user.password === enteredPassword) {
             matchedUserdata = true;
             
+        
             break; // match the value and exite the loop
         }
+     
     }
     
     if (matchedUserdata) {
+       
         Swal.fire({
             title: 'Login Successful!',
             text: 'Redirecting to the homepage...',
@@ -32,6 +36,8 @@ loginForm.addEventListener('submit', function(event) {
             }
         });
         
+
+        
     } else {
         Swal.fire({
             title: 'Login Failed!',
@@ -41,4 +47,4 @@ loginForm.addEventListener('submit', function(event) {
     }
 });
 
-            /// login form java script-------- end //
+/// login form java script-------- end //
