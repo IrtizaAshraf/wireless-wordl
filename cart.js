@@ -17,10 +17,9 @@ console.log(storedUsers);
 
 // Check if there are stored users
  let dataa= 0
-//  while (dataa < storedUsers.length){
-//       console.log( `username ${storedUsers.username}`);
-//  }
-  
+// storedUsers.forEach( (user)=> {
+      
+// });
 if (storedUsers.length > 0) {
       // Get the first user from the stored users
       const user = storedUsers[0];
