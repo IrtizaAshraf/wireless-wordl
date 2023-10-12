@@ -174,19 +174,29 @@ function goToCart() {
 const back = document.querySelector('#heart')
 // const backs = document.querySelector('#hearts')
 
+// function addColor(r) {
+//     switch (back) {
+//         case back.style.color = "red":
+//             break;
+//             case back.style.color = "black":
+//             break;
+            
+//             default:
+//             // Default color if 'r' is not 'red' or 'black'
+//             back.style.color = 'black';
+//         }
+// }
+     
 function addColor(r) {
     switch (back) {
         case back.style.color = "red":
             break;
-            case back.style.color = "black":
+        case backs.style.color = "red":
             break;
-            
-            default:
-            // Default color if 'r' is not 'red' or 'black'
-            back.style.color = 'black';
-        }
+       
+     
+    }
 }
-        
 /// crrate a function of  heart color and like  section end   ------------->
     
     
